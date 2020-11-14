@@ -88,10 +88,8 @@ prompt_end() {
 
 # Conda: (base) (the current conda environment)
 prompt_conda() {
-  if [ -n "$CONDA_DEFAULT_ENV" ]; then
+  if [[ -n $CONDA_DEFAULT_ENV ]]; then
     prompt_segment green black "($CONDA_DEFAULT_ENV) "
-  else 
-    prompt_segment green black "(base) "
   fi
 }
 
